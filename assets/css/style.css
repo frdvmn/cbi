@@ -219,12 +219,27 @@ body {
     font-family: 'Montserrat Regular';
     font-size: calc(10px + 14 * (100vw - 320px) / 1600);
 }
-.news-card__image {
+.landing .news-card__image {
     border-radius: 0px 20px 20px 0;
     max-width: 500px;
     object-fit: cover;
     filter: saturate(0);
 }
+.landing .news-slider .glide__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.landing .news-slider .glide__arrow svg > path  {
+    transition: 0.2s ease;
+}
+.landing .news-slider .glide__arrow:hover svg > path {
+    fill: #3686c7;
+    transition: 0.2s ease;
+}
+
+
 /* Адаптив */
 /* Десктоп */
 @media (min-width: 1200px) {
@@ -273,7 +288,7 @@ body {
     .landing .mission-card__title::before {
         width: 120%;
     }
-    .news-card__image {
+    .landing .news-card__image {
         border-radius:20px 20px  0 0 ;
         min-width: 100%;
         max-height: 400px;

@@ -563,6 +563,11 @@ button {
     .landing .modal-container{
         width: 80%;
     }
+    .landing .glide__arrow:hover svg > path {
+        fill: white;
+        opacity: 0.4;
+        transition: 0.2s ease;
+    }
 }
 
 /* Маленькие телефоны */

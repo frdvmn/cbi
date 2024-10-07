@@ -44,5 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
         perView: 1
     }).mount()
       
+
+    
+    MicroModal.init({
+        onShow: modal => console.info(`${modal.id} is shown`), // [1]
+        onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+
+        openClass: 'is-open', // [5]
+        disableScroll: true, // [6]
+        disableFocus: false, // [7]
+        debugMode: true // [10]
+    });
       
 });

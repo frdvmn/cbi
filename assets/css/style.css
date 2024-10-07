@@ -333,16 +333,16 @@ body {
     filter: saturate(0);
     transition: 0.5s ease;
 }
-.landing .news-slider .glide__arrow {
+.landing .glide__arrow {
     background: none;
     border: none;
     cursor: pointer;
     margin-top: 15px;
 }
-.landing .news-slider .glide__arrow svg > path  {
+.landing .glide__arrow svg > path  {
     transition: 0.2s ease;
 }
-.landing .news-slider .glide__arrow:hover svg > path {
+.landing .glide__arrow:hover svg > path {
     fill: #3686c7;
     transition: 0.2s ease;
 }

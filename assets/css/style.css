@@ -91,6 +91,37 @@ body {
 .menu.out {
     transform: translateY(-120%);
 }
+.navigation__list a:before, .navigation__list a:after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.navigation__list a:before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.navigation__list a:after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.navigation__list a:hover:before, .navigation__list a:hover:after, .navigation__list a:focus:before, .navigation__list a:focus:after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
   
 .landing {
     font-family: 'Montserrat Regular', sans-serif;
@@ -168,7 +199,6 @@ body {
     font-family: 'Montserrat Black';
     text-decoration: none;
     font-size: calc(14px + 10 * (100vw - 320px) / 1600);
-    margin-left: 50px;
 }
 
 /* Секция - основная миссия */
@@ -274,6 +304,10 @@ body {
     display: flex;
     min-height: 500px;
 }
+.landing .news-card:hover .news-card__image {
+    filter: saturate(1);
+    transition: 0.5s ease;
+}
 .landing .news-card__content {
     font-family: 'Montserrat Semibold';
     padding: 2vw;
@@ -297,6 +331,7 @@ body {
     max-width: 500px;
     object-fit: cover;
     filter: saturate(0);
+    transition: 0.5s ease;
 }
 .landing .news-slider .glide__arrow {
     background: none;
@@ -349,7 +384,12 @@ body {
     border-radius: 30px;
     height: 400px;
     align-self: center;
-  }
+    filter: saturate(0);
+    transition: 0.5s ease;
+}
+.landing .project-card:hover .project-card__image {
+    filter: saturate(1);
+}
 /* Адаптив */
 
 /* Десктоп */
@@ -434,6 +474,9 @@ body {
         border-radius: 30px 30px 0 0;
         padding: 2vw;
     }
+    .landing .project-card__title {
+        margin-top: 0;
+    }
 }
 
 /* Маленькие телефоны */
@@ -443,4 +486,14 @@ body {
         background-position: -250px 150px, center center;
         background-size: 600px 600px,auto;
     }
+    .landing .project-card__image {
+        order: -1;
+        width: 100%;
+        padding-bottom: 0;
+        border-radius: 20px 20px 0 0;
+        padding: 0px;
+        max-height: 200px;
+        align-self: flex-start;
+      }
+
 }

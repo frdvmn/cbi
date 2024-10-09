@@ -91,10 +91,11 @@ button {
     box-shadow: 0px 0px 10px #00000026;
     padding: 20px;
 }
-  
+
 .modal.is-open {
     display: block;
 }
+
 .modal {
     display: none;
 }
@@ -387,6 +388,8 @@ button {
     text-align: left;
     display: flex;
     min-height: 500px;
+    height: 100%;
+    box-sizing: border-box;
 }
 .landing .news-card:hover .news-card__image {
     filter: saturate(1);
@@ -448,6 +451,8 @@ button {
     background: rgba(255, 255, 255, 0.15);
     min-height: 400px;
     display: flex;
+    height: 100%;
+    box-sizing: border-box;
 }
 .landing .project-card__content {
     padding: 2vw;
@@ -492,6 +497,7 @@ button {
     display: flex;
     align-content: center;
     height: 100%;
+    box-sizing: border-box;
 }
 .landing .expert__image {
     width: 200px;
@@ -513,7 +519,53 @@ button {
 .landing .expert__description {
     font-size: calc(10px + 10 * (100vw - 320px) / 1600);
 }
-
+.landing .glide__slide{
+    height: auto;
+}
+/* Контакты */
+.landing .footer-section .footer__title{
+    font-family: 'Montserrat Black';
+    font-size: calc(18px + 76 * (100vw - 320px) / 1600);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.landing .footer-section {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+    background-image:radial-gradient(72.48% 139.55% at 58% 71%,rgb(58, 61, 72),rgb(1, 1, 1) 81%);
+    padding: 2vw 5vw 2vw 5vw;
+}
+.landing .footer-icons a{
+    text-decoration: none;
+}
+.landing .footer-icons a > svg{
+    transition: 0.2s ease;
+    transform: scale(0.8);
+}
+.landing .footer-icons a > svg:hover{
+    fill: #3686c7;
+    transform: scale(1);
+    transition: 0.2s ease;
+}
+.landing .footer__email a{
+    font-size: calc(10px + 14 * (100vw - 320px) / 1600);
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease;
+}
+.landing .footer__email a:hover{
+    color: #3686c7;
+}
+.landing .icons__vk {
+    margin-left: -15px;
+}
+.landing .footer__email {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 /* Адаптив */
 
 /* Десктоп */

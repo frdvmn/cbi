@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         type: 'carousel',
         perView: 1,
         startAt: 0,
-        autoplay: 3000,
+        autoplay: 5000,
         hoverpause: true
     }).mount();
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         type: 'carousel',
         perView: 1,
         startAt: 0,
-        autoplay: 3000,
+        autoplay: 6000,
         hoverpause: true
     }).mount()
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             1600: {
                 perView: 2
             },
-            1000: {
+            1200: {
                 perView: 1
             }
             }

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hoverpause: true
     }).mount();
 
-    new Glide('.projects-slider', {
+    new Glide('.projects-slider__special', {
         type: 'carousel',
         perView: 1,
         startAt: 0,

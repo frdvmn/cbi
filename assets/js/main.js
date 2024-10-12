@@ -1,6 +1,16 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    
+    MicroModal.init({
+        onShow: modal => console.info(`${modal.id} is shown`), // [1]
+        onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+
+        openClass: 'is-open', // [5]
+        disableScroll: true, // [6]
+        disableFocus: false, // [7]
+        debugMode: true // [10]
+    });
 
     // Функция открытия меню
     let openLandingMenu = () => {
@@ -34,6 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
     burgerHideOnScroll();
 
     // Слайдеры
+    new Glide('.mission-slider', {
+        type: 'carousel',
+        perView: 2,
+        startAt: 0,
+        // autoplay: 3000,
+        hoverpause: true,
+        breakpoints: {
+            1600: {
+                perView: 2
+            },
+            990: {
+                perView: 1
+            }
+            }
+    }).mount()
+
     new Glide('.news-slider', {
         type: 'carousel',
         perView: 1,
@@ -50,32 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
         hoverpause: true
     }).mount()
 
-    new Glide('.experts-slider', {
-        type: 'carousel',
-        perView: 2,
-        startAt: 0,
-        // autoplay: 3000,
-        hoverpause: true,
-        breakpoints: {
-            1600: {
-                perView: 2
-            },
-            1200: {
-                perView: 1
-            }
-            }
-    }).mount()
+    // new Glide('.experts-slider', {
+    //     type: 'carousel',
+    //     perView: 2,
+    //     startAt: 0,
+    //     // autoplay: 3000,
+    //     hoverpause: true,
+    //     breakpoints: {
+    //         1600: {
+    //             perView: 2
+    //         },
+    //         1200: {
+    //             perView: 1
+    //         }
+    //         }
+    // }).mount()
+
+
       
 
     
-    MicroModal.init({
-        onShow: modal => console.info(`${modal.id} is shown`), // [1]
-        onClose: modal => console.info(`${modal.id} is hidden`), // [2]
 
-        openClass: 'is-open', // [5]
-        disableScroll: true, // [6]
-        disableFocus: false, // [7]
-        debugMode: true // [10]
-    });
       
 });

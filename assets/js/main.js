@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         type: 'carousel',
         perView: 2,
         startAt: 0,
-        // autoplay: 3000,
+        autoplay: 3000,
         hoverpause: true,
         breakpoints: {
             1600: {
@@ -74,6 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
         startAt: 0,
         autoplay: 6000,
         hoverpause: true
+    }).mount()
+
+    new Glide('.projects-slider', {
+        type: 'carousel',
+        perView: 1,
+        startAt: 0,
+        autoplay: 3000,
+        hoverpause: true,
     }).mount()
 
     // new Glide('.experts-slider', {
